@@ -1,71 +1,546 @@
+/*! HTML5 Boilerplate v8.0.0 | MIT License | https://html5boilerplate.com/ */
+
+/* main.css 2.1.0 | MIT License | https://github.com/h5bp/main.css#readme */
 /*
-  1. Use a more-intuitive box-sizing model.
-*/
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html {
+  color: #222;
+  font-size: 1em;
+  line-height: 1.4;
 }
+
 /*
-    2. Remove default margin
-  */
+         * Remove text-shadow in selection highlight:
+         * https://twitter.com/miketaylr/status/12228805301
+         *
+         * Vendor-prefixed and regular ::selection selectors cannot be combined:
+         * https://stackoverflow.com/a/16982510/7133471
+         *
+         * Customize the background color to match your design.
+         */
+
+::-moz-selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+::selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+/*
+         * A better looking default horizontal rule
+         */
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+/*
+         * Remove the gap between audio, canvas, iframes,
+         * images, videos and the bottom of their containers:
+         * https://github.com/h5bp/html5-boilerplate/issues/440
+         */
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+  vertical-align: middle;
+}
+
+/*
+         * Remove default fieldset styles.
+         */
+
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+/*
+         * Allow only vertical resizing of textareas.
+         */
+
+textarea {
+  resize: vertical;
+}
+
+/* ==========================================================================
+          Author's custom styles
+        ========================================================================== */
 * {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-/*
-    3. Allow percentage-based heights in the application
-  */
-html,
-body {
-  height: 100%;
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
 }
-/*
-    Typographic tweaks!
-    4. Add accessible line-height
-    5. Improve text rendering
-  */
-body {
-  line-height: 1.5;
-  -webkit-font-smoothing: antialiased;
+
+a {
+  cursor: pointer;
+  text-decoration: none;
+  color: hsl(0, 0%, 100%);
 }
-/*
-    6. Improve media defaults
-  */
-img,
-picture,
-video,
-canvas,
-svg {
-  display: block;
-  max-width: 100%;
+
+ul {
+  list-style: none;
+  padding: 0;
 }
-/*
-    7. Remove built-in form typography styles
-  */
-input,
-button,
-textarea,
-select {
-  font: inherit;
+
+html {
+  font-size: 14px;
 }
-/*
-    8. Avoid text overflows
-  */
-p,
+
 h1,
 h2,
 h3,
-h4,
-h5,
-h6 {
-  overflow-wrap: break-word;
+h4 {
+  font-family: "Raleway", sans-serif;
+  margin: 0;
 }
-/*
-    9. Create a root stacking context
-  */
-#root,
-#__next {
-  isolation: isolate;
+
+p {
+  font-size: 1em;
+  line-height: 1.6;
+  margin: 0;
+}
+
+body {
+  width: 100%;
+  display: flex;
+  background-color: hsl(218, 28%, 13%);
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  color: hsl(0, 0%, 100%);
+  margin: 0;
+  text-align: center;
+}
+
+main {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 0;
+}
+
+/*  ------nav------  */
+header {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding-top: 20px;
+  background-color: hsl(217, 28%, 15%);
+}
+
+.logo-wrapper {
+  width: 25%;
+}
+
+.logo {
+  width: 100%;
+  height: auto;
+}
+
+.nav-bar-wrapper {
+  width: 85%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav {
+  width: 50%;
+}
+
+.nav-bar {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-item a {
+  color: hsl(0, 0%, 100%);
+  font-size: 0.875em;
+}
+
+/* ------ Intro ------ */
+
+.intro {
+  width: 100%;
+  margin-top: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  background: url(../images/bg-curvy-mobile.svg),
+    linear-gradient(180deg, hsl(217, 28%, 15%) 55%, hsl(218, 28%, 13%) 65%);
+  background-size: 110%;
+  background-position: 65% 54%;
+  background-repeat: no-repeat;
+  padding-top: 40px;
+  margin: 0;
+}
+
+.intro-wrapper {
+  width: 84%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.intro img {
+  width: 100%;
+  height: auto;
+}
+
+h1 {
+  font-size: 1.75em;
+  line-height: 1.5;
+  margin: 40px 0 20px 0;
+}
+
+.intro-text {
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+.intro-sign-up {
+  width: 240px;
+  height: 45px;
+  border-radius: 20px;
+  background: linear-gradient(to right, hsl(176, 68%, 64%), hsl(198, 60%, 50%));
+  border: none;
+  color: hsl(0, 0%, 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* --------- Features ---------- */
+
+.features {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: hsl(218, 28%, 13%);
+  width: 100%;
+  margin: 40px 0;
+}
+
+.feature-items-wrapper {
+  width: 85%;
+}
+
+.features article {
+  width: 100%;
+  padding-top: 90px;
+}
+
+.features h4 {
+  font-size: 1.3em;
+  margin: 30px 0 10px 0;
+}
+
+/* ----- About ----- */
+
+.about {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 160px 0 100px 0;
+}
+
+.about-wrapper {
+  width: 85%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.img-wrapper {
+  width: 95%;
+}
+
+.img-wrapper img {
+  width: 100%;
+}
+
+.about h2 {
+  font-size: 1.3em;
+  margin-top: 50px;
+}
+
+.about p {
+  text-align: left;
+  margin-top: 20px;
+}
+
+a.learn-more {
+  font-size: 0.85em;
+  color: hsl(176, 68%, 64%);
+  margin-top: 20px;
+  border-bottom: 1px solid;
+  padding-bottom: 4px;
+  position: absolute;
+  left: 7.5%;
+}
+
+/* ------- Testimonials -------- */
+.testimonials {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 50px 0 20px 0;
+}
+
+.quotation-mark {
+  width: 25px;
+  position: absolute;
+  left: 6px;
+  top: -17px;
+  z-index: -1;
+}
+
+.testimonials-wrapper {
+  width: 75%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  gap: 22px;
+}
+
+.testimonial-wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: hsl(219, 30%, 18%);
+  padding: 25px 0 20px 0;
+  text-align: left;
+  border-radius: 5px;
+}
+
+.testimonial-quote {
+  width: 85%;
+  font-size: 0.75em;
+  line-height: 1.6;
+}
+
+.caption-wrapper {
+  width: 85%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 15px;
+}
+
+.caption-wrapper img {
+  width: 25px;
+  border-radius: 50%;
+}
+
+figcaption {
+  font-size: 0.75em;
+  font-weight: 700;
+  margin-left: 10px;
+}
+
+figcaption .title {
+  font-size: 0.7em;
+  font-weight: 400;
+}
+
+/* ------- Aside -------- */
+
+.email-sign-up {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: hsl(217, 28%, 15%);
+  border-radius: 10px;
+  position: relative;
+  top: 150px;
+  padding: 40px 0 35px 0;
+}
+
+.sign-up-text-wrapper {
+  width: 85%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.email-sign-up h3 {
+  font-size: 1.25em;
+}
+
+.email-sign-up p {
+  margin: 18px 0 10px 0;
+}
+
+.email-sign-up label {
+  visibility: hidden;
+}
+
+.email-sign-up input {
+  width: 100%;
+  height: 48px;
+  background-color: hsl(0, 0%, 100%);
+  border: none;
+  border-radius: 25px;
+  padding-left: 30px;
+}
+
+.email-sign-up input::placeholder {
+  font-size: 0.75em;
+  color: lightgray;
+}
+
+.email-sign-up button {
+  width: 100%;
+  height: 48px;
+  color: hsl(0, 0%, 100%);
+  background: linear-gradient(to right, hsl(176, 68%, 64%), hsl(198, 60%, 50%));
+  border: none;
+  border-radius: 25px;
+  margin-top: 25px;
+}
+/* ------- Footer -------- */
+
+footer {
+  width: 100%;
+  background-color: hsl(216, 53%, 9%);
+  padding: 220px 0 40px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-content-wrapper {
+  width: 85%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+}
+
+.address-wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-top: 40px;
+}
+
+.address-wrapper img {
+  margin-top: 7px;
+}
+
+.address-wrapper p {
+  width: 85%;
+  font-size: 1.15em;
+}
+
+.contact-info {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-top: 20px;
+}
+
+.contact-info img {
+  margin-top: 4px;
+}
+
+.contact-info p {
+  width: 85%;
+}
+
+.footer-links {
+  width: 100%;
+  margin-top: 80px;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 30px;
+}
+
+.footer-links li {
+  width: 100%;
+  font-size: 1.15em;
+  margin: 10px 0;
+}
+
+.social-link-wrapper {
+  width: 30%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.social-media-link i {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  border: 1px solid hsl(0, 0%, 100%);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
 
 .attribution {
