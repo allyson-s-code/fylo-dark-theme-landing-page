@@ -118,7 +118,6 @@ h2,
 h3,
 h4 {
   font-family: "Raleway", sans-serif;
-  margin: 0;
 }
 
 p {
@@ -148,6 +147,14 @@ main {
   justify-content: flex-start;
   align-items: center;
   margin: 0;
+}
+
+.intro-wrapper {
+  max-width: 1200px;
+}
+
+.feature-items-wrapper {
+  max-width: 1300px;
 }
 
 /*  ------nav------  */
@@ -240,7 +247,7 @@ h1 {
 .intro-sign-up {
   width: 240px;
   height: 45px;
-  border-radius: 20px;
+  border-radius: 25px;
   background: linear-gradient(to right, hsl(176, 68%, 64%), hsl(198, 60%, 50%));
   border: none;
   color: hsl(0, 0%, 100%);
@@ -264,11 +271,15 @@ h1 {
 
 .feature-items-wrapper {
   width: 85%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 90px;
 }
 
 .features article {
   width: 100%;
-  padding-top: 90px;
 }
 
 .features h4 {
@@ -321,6 +332,7 @@ a.learn-more {
   padding-bottom: 4px;
   position: absolute;
   left: 7.5%;
+  display: block;
 }
 
 /* ------- Testimonials -------- */
@@ -332,14 +344,6 @@ a.learn-more {
   margin: 50px 0 20px 0;
 }
 
-.quotation-mark {
-  width: 25px;
-  position: absolute;
-  left: 6px;
-  top: -17px;
-  z-index: -1;
-}
-
 .testimonials-wrapper {
   width: 75%;
   display: flex;
@@ -348,6 +352,14 @@ a.learn-more {
   align-items: center;
   position: relative;
   gap: 22px;
+}
+
+.quotation-mark {
+  width: 25px;
+  position: absolute;
+  left: 6px;
+  top: -17px;
+  z-index: -1;
 }
 
 .testimonial-wrapper {
@@ -425,6 +437,7 @@ figcaption .title {
 }
 
 .email-sign-up label {
+  width: 100%;
   visibility: hidden;
 }
 
@@ -463,13 +476,28 @@ footer {
   align-items: center;
 }
 
+.footer-logo-container {
+  width: 80%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+
 .footer-content-wrapper {
   width: 85%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   text-align: left;
+}
+
+.contact-info-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
 }
 
 .address-wrapper {
@@ -523,13 +551,22 @@ footer {
   margin: 10px 0;
 }
 
-.social-link-wrapper {
-  width: 30%;
+.social-media {
+  width: 32%;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  text-align: center;
+  align-self: center;
+}
+
+.social-link-wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  align-self: center;
 }
 
 .social-media-link i {
@@ -543,10 +580,365 @@ footer {
   align-items: center;
 }
 
-.attribution {
-  font-size: 11px;
-  text-align: center;
+@media only screen and (min-width: 750px) {
+  /*--- Header ---*/
+  header {
+    padding-top: 50px;
+  }
+
+  .logo-wrapper {
+    width: 25%;
+  }
+
+  nav {
+    width: 35%;
+  }
+
+  .nav-item a {
+    font-size: 1em;
+  }
+
+  /*--- Intro ---*/
+  .intro {
+    background: url(../images/bg-curvy-desktop.svg),
+      linear-gradient(180deg, hsl(217, 28%, 15%) 85%, hsl(218, 28%, 13%) 84%);
+    background-size: 110%;
+    background-position: 65% 84%;
+    background-repeat: no-repeat;
+    padding-top: 75px;
+    padding-bottom: 150px;
+    margin: 0;
+  }
+
+  .intro-wrapper {
+    width: 75%;
+  }
+
+  h1 {
+    font-size: 2em;
+    line-height: 1.5;
+    margin: 50px 0 35px 0;
+  }
+
+  .intro-text {
+    width: 85%;
+    font-size: 1.2em;
+  }
+
+  /*--- Features ---*/
+
+  .feature-items-wrapper {
+    width: 85%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: flex-start;
+  }
+
+  .features article {
+    width: 35%;
+  }
+
+  .features article img {
+    height: 80px;
+    width: auto;
+  }
+
+  /* ----- About ----- */
+
+  .about-wrapper {
+    width: 85%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .img-wrapper {
+    width: 47%;
+  }
+
+  .about-text-wrapper {
+    width: 47%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    text-align: left;
+  }
+  .img-wrapper img {
+    width: 100%;
+  }
+
+  .about h2 {
+    font-size: 2em;
+  }
+
+  a.learn-more {
+    font-size: 1em;
+    position: static;
+  }
+  /* ----- Testimonials ----- */
+  .testimonials-wrapper {
+    width: 85%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .quotation-mark {
+    width: 40px;
+    position: absolute;
+    left: -10px;
+    top: -28px;
+    z-index: -1;
+  }
+
+  .testimonial-wrapper {
+    width: 31%;
+    padding: 40px 20px;
+    border-radius: 10px;
+  }
+
+  .testimonial-quote {
+    font-size: 1em;
+  }
+
+  .caption-wrapper {
+    margin-top: 25px;
+  }
+
+  /*--- Aside ---*/
+  .email-sign-up {
+    width: 85%;
+    position: relative;
+    top: 110px;
+    padding: 40px 0 40px 0;
+    margin-top: 80px;
+  }
+
+  .sign-up-text-wrapper {
+    width: 80%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .email-sign-up h3 {
+    width: 100%;
+    font-size: 2.4em;
+  }
+
+  .email-sign-up input {
+    width: 66%;
+    display: flex;
+  }
+
+  .email-sign-up input::placeholder {
+    font-size: 0.875em;
+  }
+
+  .email-sign-up button {
+    width: 30%;
+    margin-top: 0;
+  }
+
+  /* ----- Footer ----- */
+
+  .footer-logo-container {
+    width: 85%;
+  }
+
+  .footer-logo {
+    width: 150px;
+  }
+  .footer-content-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .contact-info-container {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    text-align: left;
+    height: 100px;
+    margin-top: 15px;
+  }
+
+  .address-wrapper {
+    width: 50%;
+    margin-top: 20px;
+  }
+
+  .address-wrapper p {
+    width: 90%;
+  }
+
+  .contact-info {
+    width: 25%;
+  }
+
+  .footer-links {
+    width: 85%;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    text-align: left;
+    height: 150px;
+  }
+
+  ul.link-group-1,
+  ul.link-group-2 {
+    width: 30%;
+  }
+
+  .social-media {
+    width: 30%;
+  }
+
+  .social-link-wrapper {
+    width: 80%;
+  }
 }
-.attribution a {
-  color: hsl(228, 45%, 44%);
+
+@media only screen and (min-width: 1000px) {
+  /*--- Header ---*/
+  header {
+    padding-top: 70px;
+  }
+
+  .logo-wrapper {
+    width: 15%;
+  }
+
+  nav {
+    width: 22%;
+  }
+
+  .nav-item a {
+    font-size: 1.1em;
+  }
+
+  /*--- Intro ---*/
+  .intro {
+    background: url(../images/bg-curvy-desktop.svg),
+      linear-gradient(180deg, hsl(217, 28%, 15%) 100%, hsl(218, 28%, 13%) 100%);
+    background-size: 100%;
+    background-position: 65% 100%;
+    background-repeat: no-repeat;
+    padding-top: 75px;
+    margin: 0;
+  }
+
+  .intro-wrapper {
+    width: 55%;
+  }
+
+  h1 {
+    font-size: 2.85em;
+  }
+
+  .intro-text {
+    width: 80%;
+    font-size: 1.4em;
+  }
+
+  .intro-sign-up {
+    width: 280px;
+    height: 55px;
+    border-radius: 30px;
+    font-size: 1.2em;
+  }
+
+  /*--- Features ---*/
+
+  .features article {
+    width: 29%;
+  }
+
+  .features article img {
+    height: 80px;
+    width: auto;
+  }
+
+  /* ----- About ----- */
+  .about h2 {
+    width: 80%;
+    font-size: 2.85em;
+  }
+
+  .about p {
+    font-size: 1.2em;
+  }
+
+  a.learn-more {
+    font-size: 1.2em;
+  }
+
+  /* ----- Testimonials ----- */
+  .quotation-mark {
+    width: 55px;
+    position: absolute;
+    left: -8px;
+    top: -37px;
+    z-index: -1;
+  }
+
+  /* ----- Aside ----- */
+  .email-sign-up {
+    width: 65%;
+  }
+
+  /* ----- Footer ----- */
+  .footer-logo {
+    width: 170px;
+  }
+
+  .footer-content-wrapper {
+    width: 85%;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    text-align: left;
+    height: 175px;
+  }
+
+  .contact-info-container {
+    width: 65%;
+  }
+
+  .address-wrapper {
+    width: 60%;
+  }
+
+  .contact-info {
+    width: 28%;
+  }
+
+  .footer-links {
+    width: 35%;
+    margin-top: 20px;
+  }
+
+  ul.link-group-1,
+  ul.link-group-2 {
+    width: 30%;
+  }
+
+  .social-media {
+    width: 40%;
+  }
+
+  .social-link-wrapper {
+    width: 100%;
+  }
 }
