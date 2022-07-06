@@ -104,6 +104,10 @@ a {
   color: hsl(0, 0%, 100%);
 }
 
+button {
+  cursor: pointer;
+}
+
 ul {
   list-style: none;
   padding: 0;
@@ -202,6 +206,11 @@ nav {
   font-size: 0.875em;
 }
 
+.nav-item a:hover {
+  font-weight: 700;
+  text-decoration: underline;
+}
+
 /* ------ Intro ------ */
 
 .intro {
@@ -254,6 +263,10 @@ h1 {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.intro-sign-up:hover {
+  background: hsl(185, 51%, 67%);
 }
 
 /* --------- Features ---------- */
@@ -335,6 +348,14 @@ a.learn-more {
   display: block;
 }
 
+a.learn-more:hover {
+  color: hsl(0, 0%, 100%);
+}
+
+.learn-more-arrow:hover {
+  fill: hsl(0, 0%, 100%);
+}
+
 /* ------- Testimonials -------- */
 .testimonials {
   display: flex;
@@ -372,6 +393,7 @@ a.learn-more {
   padding: 25px 0 20px 0;
   text-align: left;
   border-radius: 5px;
+  box-shadow: 4px 4px 4px 3px hsl(219, 30%, 18%, 0.25);
 }
 
 .testimonial-quote {
@@ -418,6 +440,7 @@ figcaption .title {
   position: relative;
   top: 150px;
   padding: 40px 0 35px 0;
+  box-shadow: 4px 4px 4px 3px hsl(0, 0%, 0%, 0.15);
 }
 
 .sign-up-text-wrapper {
@@ -464,6 +487,11 @@ figcaption .title {
   border-radius: 25px;
   margin-top: 25px;
 }
+
+.email-sign-up button:hover {
+  background: hsl(185, 51%, 67%);
+}
+
 /* ------- Footer -------- */
 
 footer {
@@ -578,6 +606,11 @@ footer {
   flex-direction: row;
   justify-content: center;
   align-items: center;
+}
+
+.social-media-link i:hover {
+  color: hsl(176, 68%, 64%);
+  border: 1px solid hsl(176, 68%, 64%);
 }
 
 @media only screen and (min-width: 750px) {
