@@ -337,7 +337,7 @@ h1 {
   margin-top: 20px;
 }
 
-a.learn-more {
+.learn-more {
   font-size: 0.85em;
   color: hsl(176, 68%, 64%);
   margin-top: 20px;
@@ -348,11 +348,11 @@ a.learn-more {
   display: block;
 }
 
-a.learn-more:hover {
+.learn-more:hover {
   color: hsl(0, 0%, 100%);
 }
 
-.learn-more-arrow:hover {
+.learn-more:hover .learn-more-arrow {
   fill: hsl(0, 0%, 100%);
 }
 
@@ -832,8 +832,8 @@ footer {
     height: 150px;
   }
 
-  ul.link-group-1,
-  ul.link-group-2 {
+  .link-group-1,
+  .link-group-2 {
     width: 30%;
   }
 
@@ -916,7 +916,7 @@ footer {
     font-size: 1.2em;
   }
 
-  a.learn-more {
+  .learn-more {
     font-size: 1.2em;
   }
 
@@ -966,8 +966,8 @@ footer {
     margin-top: 20px;
   }
 
-  ul.link-group-1,
-  ul.link-group-2 {
+  .link-group-1,
+  .link-group-2 {
     width: 30%;
   }
 
