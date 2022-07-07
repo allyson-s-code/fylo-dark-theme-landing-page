@@ -579,6 +579,10 @@ footer {
   margin: 10px 0;
 }
 
+.footer-links li:hover {
+  font-weight: 700;
+}
+
 .social-media {
   width: 32%;
   display: flex;
