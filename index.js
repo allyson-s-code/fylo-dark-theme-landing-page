@@ -11,6 +11,7 @@ const validateEmail = function () {
     error.classList.remove("hide");
   } else {
     error.classList.add("hide");
+    return email.toLowerCase().trim();
   }
 };
 
