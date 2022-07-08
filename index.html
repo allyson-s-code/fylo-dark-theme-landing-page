@@ -21,7 +21,7 @@
       href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Raleway:wght@400;700&display=swap"
       rel="stylesheet"
     />
-
+    <script src="index.js" defer></script>
     <script
       src="https://kit.fontawesome.com/7972af805d.js"
       crossorigin="anonymous"
@@ -190,14 +190,19 @@
             be happy to help you.
           </p>
 
-          <label for="email">Enter your email:</label>
+          <div class="email-sign-up-wrapper">
+            <label for="email">Enter your email:</label>
           <input
             type="email"
             id="email"
             name="email"
             placeholder="email@example.com"
+            required
           />
-          <button type="submit">Get Started For Free</button>
+          <span role="alert" id="error-message" class="hide">Please enter a valid email address</span>
+          </div>
+          
+          <button id="email-submit" type="submit">Get Started For Free</button>
         </div> 
       </aside>
     </main>

@@ -485,11 +485,22 @@ figcaption .title {
   background: linear-gradient(to right, hsl(176, 68%, 64%), hsl(198, 60%, 50%));
   border: none;
   border-radius: 25px;
-  margin-top: 25px;
+  margin-top: 15px;
 }
 
 .email-sign-up button:hover {
   background: hsl(185, 51%, 67%);
+}
+
+#error-message {
+  font-size: 0.75em;
+  color: hsl(0, 100%, 63%);
+  align-self: left;
+  padding-top: 4px;
+}
+
+.hide {
+  visibility: hidden;
 }
 
 /* ------- Footer -------- */
@@ -751,7 +762,7 @@ footer {
     width: 85%;
     position: relative;
     top: 110px;
-    padding: 40px 0 40px 0;
+    padding: 40px 0 25px 0;
     margin-top: 80px;
   }
 
@@ -768,9 +779,12 @@ footer {
     font-size: 2.4em;
   }
 
-  .email-sign-up input {
+  .email-sign-up-wrapper {
     width: 66%;
     display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
   }
 
   .email-sign-up input::placeholder {
@@ -780,6 +794,10 @@ footer {
   .email-sign-up button {
     width: 30%;
     margin-top: 0;
+  }
+
+  #error-message {
+    padding: 6px 0 0 30px;
   }
 
   /* ----- Footer ----- */
